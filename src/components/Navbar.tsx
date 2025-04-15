@@ -7,15 +7,16 @@ export default function Navigation() {
   const router = useRouter();
 
   return (
-    <Navbar>
+    <Navbar className="w-full max-w-full">
       <NavbarBrand>
         <p className="font-bold text-inherit">Довідник мемів</p>
       </NavbarBrand>
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+      <NavbarContent className="flex gap-2 sm:gap-4" justify="center">
         <NavbarItem>
           <Button 
             color="primary" 
             variant="flat" 
+            size="sm"
             onPress={() => router.push('/table')}
           >
             Таблиця
@@ -25,6 +26,7 @@ export default function Navigation() {
           <Button 
             color="primary" 
             variant="flat" 
+            size="sm"
             onPress={() => router.push('/list')}
           >
             Список
